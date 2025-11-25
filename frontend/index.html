@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Assistant</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Harun'ın Asistanı</h1>
+  </header>
+  
+  <nav class="menu">
+    <button data-page="home">Ana Menü</button>
+    <button data-page="chat">ChatGPT</button>
+    <button data-page="finance">Hesap</button>
+    <button data-page="bmi">BMI & Egzersiz</button>
+    <button data-page="alarm">Alarm</button>
+  </nav>
+
+  <main>
+    <section id="home" class="page active">
+      <h2>Bugün Yapacakların</h2>
+      <ul>
+        <li>Okula gitmek</li>
+        <li>Ödevleri tamamlamak</li>
+        <li>Spor yapmak</li>
+      </ul>
+    </section>
+
+    <section id="chat" class="page">
+      <h2>ChatGPT</h2>
+      <input id="query" placeholder="Sorunu yaz..." />
+      <button id="ask">Sor</button>
+      <button id="clear">Temizle</button>
+      <p id="answer"></p>
+    </section>
+
+    <section id="finance" class="page">
+      <h2>Hesap</h2>
+      <p>Bakiye: <span id="balance">0 TL</span></p>
+      <input type="number" id="amount" placeholder="Miktar" />
+      <select id="type">
+        <option value="income">Gelir</option>
+        <option value="expense">Gider</option>
+      </select>
+      <button id="addTx">Ekle</button>
+      <div id="txlist"></div>
+    </section>
+
+    <section id="bmi" class="page">
+      <h2>BMI & Egzersiz</h2>
+      <input id="height" type="number" placeholder="Boy (cm)" />
+      <input id="weight" type="number" placeholder="Kilo (kg)" />
+      <button id="calcBmi">Hesapla</button>
+      <p>BMI: <span id="bmi">0</span></p>
+      <p id="exercise"></p>
+    </section>
+
+    <section id="alarm" class="page">
+      <h2>Alarm</h2>
+      <input type="time" id="wakeTime"/>
+      <button id="setAlarm">Kur</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
