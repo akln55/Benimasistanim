@@ -36,3 +36,4 @@ app.post('/ask', async (req, res) => {
 });
 
 export default app;
+export default app;
