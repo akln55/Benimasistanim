@@ -1,0 +1,8 @@
+body { margin:0; font-family:sans-serif; background:#fff; color:#000; }
+header { background:#c00; color:#fff; padding:1em; text-align:center; }
+.menu { display:flex; justify-content:space-around; background:#000; }
+.menu button { background:#fff; color:#c00; border:none; padding:.5em 1em; cursor:pointer; }
+.page { display:none; padding:1em; }
+.page.active { display:block; }
+button:hover { opacity:.8; }
+input, select { margin:.5em 0; padding:.5em; }
